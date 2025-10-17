@@ -21,13 +21,15 @@ public class StudentApp {
         while (i < count){
             System.out.print("Please enter student name: ");
             String name = sc.nextLine();
-            System.out.print("Please enter studentID: ");
-            String studentID = sc.nextLine();
+
+            System.out.print("Please enter student email: ");
+            String email = sc.nextLine();
+
             System.out.print("Please enter student course: ");
             String course = sc.nextLine();
 
             //Storage of new student
-            Student student = new Student(name,studentID,course);
+            Student student = new Student(name, email , course);
 
             students.add(student);
             //Incrementing i until loop condition is false

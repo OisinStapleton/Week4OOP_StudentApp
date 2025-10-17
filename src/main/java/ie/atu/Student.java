@@ -1,12 +1,12 @@
 package ie.atu;
 
 public class Student {
-    String name, studentID, course;
+    String name, email, course;
 
     public Student(String name, String email, String course){
         this.name = name;
-        this.studentID = email;
         this.course = course;
+        this.email = email;
     }
 
     //Getters
@@ -14,7 +14,7 @@ public class Student {
         return name;
     }
     public String getEmail(){
-        return studentID;
+        return email;
     }
     public String getCourse(){
         return course;
@@ -26,7 +26,7 @@ public class Student {
     }
 
     public void setEmail(String email){
-        this.studentID = email;
+        this.email = email;
     }
 
     public void setCourse(String course){
@@ -36,7 +36,7 @@ public class Student {
     // Display in a table like form
     @Override
     public String toString(){
-        return "Student{name ='" + name + "', studentID ='" + studentID + "', course ='" + course + "'}";
+        return "Student{name ='" + name + "', studentID ='" + email + "', course ='" + course + "'}";
     }
 
 }
