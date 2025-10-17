@@ -9,25 +9,32 @@ public class StudentApp {
         Scanner sc = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
 
-        System.out.print("How many students do you want to enter?: ");
+        // Prompting user for number of entries, stores this number in int count
+        System.out.print("How many students would you like to add?: ");
         int count = sc.nextInt();
         sc.nextLine();
 
+        // Initializing our loop starting point to zero
         int i = 0;
+
+        // Re- prompts user until number entered from user is met
         while (i < count){
             System.out.print("Please enter student name: ");
             String name = sc.nextLine();
-            System.out.print("Please enter student email: ");
-            String email = sc.nextLine();
+            System.out.print("Please enter studentID: ");
+            String studentID = sc.nextLine();
             System.out.print("Please enter student course: ");
             String course = sc.nextLine();
 
-            Student student = new Student(name,email,course);
+            //Storage of new student
+            Student student = new Student(name,studentID,course);
 
             students.add(student);
+            //Incrementing i until loop condition is false
             i++;
 
         }
+        // After Loop completion display is shown
         System.out.println("Student List:");
         for (Student s : students){
             System.out.println(s);
