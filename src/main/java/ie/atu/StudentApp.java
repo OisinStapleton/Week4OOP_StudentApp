@@ -14,10 +14,10 @@ public class StudentApp {
         int count = sc.nextInt();
         sc.nextLine();
 
-        // Initializing our loop starting point to zero
+        // Initializing our loop to start at zero which will increment at end of collection
         int i = 0;
 
-        // Re- prompts user until number entered from user is met
+        // Re- prompts user until count number from user is met
         while (i < count){
             System.out.print("Please enter student name: ");
             String name = sc.nextLine();
@@ -38,6 +38,8 @@ public class StudentApp {
         }
         // After Loop completion display is shown
         System.out.println("Student List:");
+
+        // for each loop prints the values stored in each student(cleaner print)
         for (Student s : students){
             System.out.println(s);
         }
